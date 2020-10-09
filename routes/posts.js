@@ -1,8 +1,8 @@
 const express = require('express');
-const router = expres.Router();
+const router = express.Router();
 
 /* GET home page. */
-rouoter.get('/',(req,res,next)=> {
+router.get('/',(req,res,next)=> {
 
 res.render('index',{title: 'Surf Shop - Home'});
 });
