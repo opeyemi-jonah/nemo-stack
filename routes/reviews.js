@@ -8,7 +8,7 @@ const router = express.Router({ mergeParams: true});
     
     /* POST reviews create /posts/:id/reviews */
 router.post('/create',(req,res,next)=> {
-    res.send('CREATE /reviews');
+    res.send('CREATE /posts/id/reviews/:reviews_id');
     });
 
     /* GET reviews edit index /reviews/:reviews_id/edit */
