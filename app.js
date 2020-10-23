@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Mount Routes
 app.use('/', indexRouter);
 app.use('/posts', postsRouter);
 app.use('/posts/:id/reviews', reviewsRouter);

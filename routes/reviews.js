@@ -1,11 +1,16 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true});
 
-    /* GET reviews index /reviews */
+    /* GET reviews index /posts/:id/reviews */
     router.get('/',(req,res,next)=> {
     res.send('INDEX /posts/:id/reviews');
     });
     
+   /* GET reviews new /posts/:id/reviews */
+   router.get('/new',(req,res,next)=> {
+    res.send('NEW /reviews/new');
+    });
+
     /* POST reviews create /posts/:id/reviews */
 router.post('/create',(req,res,next)=> {
     res.send('CREATE /posts/id/reviews/:reviews_id');
