@@ -11,17 +11,17 @@ router.post('/create',(req,res,next)=> {
     res.send('CREATE /posts/id/reviews/:reviews_id');
     });
 
-    /* GET reviews edit index /reviews/:reviews_id/edit */
+    /* GET reviews edit index /posts/:id/reviews/:reviews_id/edit */
 router.get('/:reviews_id/edit',(req,res,next)=> {
     res.send('EDIT /posts/:id/reviews/:reviews_id/edit');
     });
 
-    /* PUT reviews update index /reviews/:reviews_id */
+    /* PUT reviews update index /posts/:id/reviews/:reviews_id */
 router.put('/:reviews_id',(req,res,next)=> {
     res.send('UPDATE /posts/:id/reviews/:reviews_id');
     });
 
-    /* DELETE reviews destroy index /reviews/:id */
+    /* DELETE reviews destroy index /posts/:id/reviews/:id */
 router.delete('/:reviews_id',(req,res,next)=> {
     res.send('DELETE /posts/:id/reviews/:reviews_id');
     });
