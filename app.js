@@ -3,9 +3,12 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const bodyParser = require('body-parser');
 const passport = require('passport');
 const User = require('./models/user');
-const passportLocalMongoose = require('');
+const session = require('express-session');
+const mongoose = require('mongoose');
+// const passportLocalMongoose = require('');
 
 //require routes
 const indexRouter = require('./routes/index');
@@ -28,8 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'hang ten dude',
   resave: false,
-  saveUninitialized: true,
-}))
+  saveUninitialized: true
+}));
 
 passport.use(User.createStrategy());
 
