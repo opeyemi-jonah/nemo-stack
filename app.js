@@ -24,7 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Configure Passport and Sessions
+//Configure Passport and Sessions. Session should always come before passport or else passport won't work
+app.use(session({
+  secret: 'hang ten dude',
+  resave: false,
+  saveUninitialized: true,
+}))
+
 passport.use(User.createStrategy());
 
 passport.serializeUser(User.serializeUser());

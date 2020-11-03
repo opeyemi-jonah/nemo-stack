@@ -5,7 +5,7 @@ const PostSchema = new Schema({
     title: String,
     price: String,
     description: String,
-    images: [String],
+    images: [ String ],
     location: String,
     lat: Number,
     lng: Number,
@@ -22,16 +22,4 @@ const PostSchema = new Schema({
 });
 
 module.exports = mongoose.model('Post', PostSchema);
-/*
-Post
--title - string
--price - string
--description -string
--images -array of strings
--location - string
--longitude -number
--latitude - number
--author - object id
--reviews - array of objects
-*/
 
